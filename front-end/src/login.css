@@ -1,0 +1,15 @@
+.login-logo {
+    height: 85px;
+    width: fit-content;
+    margin-bottom: 15px;
+}
+
+.login {
+    height: inherit;
+}
+
+.login-components {
+    background-color: white;
+    width: 400px;
+    height: 490px;
+}
