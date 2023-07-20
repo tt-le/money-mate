@@ -1,15 +1,22 @@
-.login-logo {
+.logo {
     height: 85px;
     width: fit-content;
     margin-bottom: 15px;
 }
 
-.login {
+.login, .register {
     height: inherit;
 }
 
-.login-components {
+.login-components, .register-components {
     background-color: white;
     width: 400px;
+}
+
+.login-components {
     height: 490px;
+}
+
+.register-components {
+    height: 685px;
 }

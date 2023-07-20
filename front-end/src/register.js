@@ -25,7 +25,18 @@ const loginTheme = createTheme({
     }
 });
 
-function Login() {
+function TextBox({ id, label }) {
+    return (
+        <TextField 
+            id={ id }
+            label={ label } 
+            variant='outlined' 
+            sx={{ m: 1, width: '350px' }}
+        />
+    );
+}
+
+function Password({ label }) {
     const [showPassword, setShowPassword] = React.useState(false);
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleMouseDownPassword = (event) => {
@@ -33,7 +44,32 @@ function Login() {
     };
 
     return (
-        <div className='login'>
+        <FormControl sx={{ m: 1, width: '350px' }} variant="outlined">
+            <InputLabel htmlFor="outlined-adornment-password">{ label }</InputLabel>
+            <OutlinedInput
+                id="outlined-adornment-password"
+                type={showPassword ? 'text' : 'password'}
+                endAdornment={
+                    <InputAdornment position="end">
+                        <IconButton
+                            aria-label="toggle password visibility"
+                            onClick={handleClickShowPassword}
+                            onMouseDown={handleMouseDownPassword}
+                            edge="end"
+                        >
+                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                    </InputAdornment>
+                }
+                label={ label }
+            />
+        </FormControl>
+    );
+}
+
+function Register() {
+    return (
+        <div className='register'>
             <ThemeProvider theme={ loginTheme }>
                 <Grid 
                     container 
@@ -42,7 +78,7 @@ function Login() {
                     height='inherit'
                 >
                     <Stack
-                        className='login-components'
+                        className='register-components'
                         spacing={ 1.5 } 
                         justifyContent='center' 
                         alignItems='center'
@@ -55,43 +91,21 @@ function Login() {
                         
                         <Box height='15px'></Box>
                         
-                        <TextField 
-                            id='email' 
-                            label='Email' 
-                            variant='outlined' 
-                            sx={{ m: 1, width: '350px' }}
-                        />
-                        
-                        <FormControl sx={{ m: 1, width: '350px' }} variant="outlined">
-                            <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                            <OutlinedInput
-                                id="outlined-adornment-password"
-                                type={showPassword ? 'text' : 'password'}
-                                endAdornment={
-                                <InputAdornment position="end">
-                                    <IconButton
-                                    aria-label="toggle password visibility"
-                                    onClick={handleClickShowPassword}
-                                    onMouseDown={handleMouseDownPassword}
-                                    edge="end"
-                                    >
-                                    {showPassword ? <VisibilityOff /> : <Visibility />}
-                                    </IconButton>
-                                </InputAdornment>
-                                }
-                                label="Password"
-                            />
-                        </FormControl>
+                        <TextBox id='first-name' label='First Name' />
+                        <TextBox id='last-name' label='Last Name' />
+                        <TextBox id='email' label='Email' />
+                        <Password label='Password' />
+                        <Password label='Confirm Password' />
                         
                         <Button variant='contained' color='primary' sx={{ m: 1, width: '350px' }}>
-                            <Typography variant='button'>Sign In</Typography>
+                            <Typography variant='button'>Sign Up</Typography>
                         </Button>
                         
                         <div></div>
                         <Divider variant='middle' sx={{width: '100%', maxWidth: '350px' }}/>
                         
-                        <Link href="/" underline='none' color='#4F86D0'>
-                            <Typography variant='caption'>Sign up</Typography>
+                        <Link href="" underline='none' color='#4F86D0'>
+                            <Typography variant='caption'>Sign in</Typography>
                         </Link>
                     </Stack>
                 </Grid>
@@ -101,4 +115,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Register;
