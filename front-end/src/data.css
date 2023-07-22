@@ -1,0 +1,19 @@
+.table {
+    height: inherit;
+}
+
+.table-components {
+    width: 95%;
+    height: 90%;
+    background-color: white;
+    padding: 4%;
+}
+
+.subtitles {
+    margin-top: 1%;
+    color: #9f9999;
+}
+
+.item {
+    margin: 1.25% 0%;
+}

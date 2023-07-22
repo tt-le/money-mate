@@ -9,12 +9,10 @@ import { Visibility, VisibilityOff } from '@mui/icons-material';
 const loginTheme = createTheme({
     components: {
         MuiTypography: {
-            variants: [
-                {
-                    props: { variant: 'h5' },
-                    style: { fontWeight: 500 }
-                }
-            ]
+            variants: [{
+                props: { variant: 'h5' },
+                style: { fontWeight: 500 }
+            }]
         }
     },
     palette: {
@@ -94,8 +92,7 @@ function Login() {
                             <Typography variant='caption'>Sign up</Typography>
                         </Link>
                     </Stack>
-                </Grid>
-                
+                </Grid>  
             </ThemeProvider>
         </div>
     );
