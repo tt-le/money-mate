@@ -1,6 +1,5 @@
 import './App.css';
 import Login from './login.js';
-import Table from './data-table.js';
 
 function App() {
   return (
@@ -10,10 +9,10 @@ function App() {
       </head>
       <body>
         <header>
-            
+
         </header>
         <main>
-          <Table />
+          <Login />
         </main>
         <footer>
 
