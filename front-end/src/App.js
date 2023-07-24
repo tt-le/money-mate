@@ -1,5 +1,5 @@
 import './App.css';
-import Login from './login.js';
+import LandingHeader from './landing-header.js';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         <meta name='viewport' content='initial-scale=1, width=device-width' />
       </head>
       <body>
-        <Login />
+        <LandingHeader />
       </body>
     </div>
   );

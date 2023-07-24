@@ -11,7 +11,7 @@ const buttonTheme = createTheme({
     }
 });
 
-function Header() {
+function LandingHeader() {
     return (
         <header>
             <Grid
@@ -40,19 +40,25 @@ function Header() {
                 <Grid
                     container 
                     direction='row'
-                    sm='auto'
+                    justifyContent='space-between'
+                    sx={{ width: '150px' }}
                 >
-                    <Grid item>
-                        <ThemeProvider theme={ buttonTheme }>
+                    <ThemeProvider theme={ buttonTheme }>
+                        <Grid item>
                             <Button color='primary'>
-                                Log Out
+                                Log In
                             </Button>
-                        </ThemeProvider>
-                    </Grid>
+                        </Grid>
+                        <Grid item>
+                            <Button color='primary'>
+                                Register
+                            </Button>
+                        </Grid>
+                    </ThemeProvider>
                 </Grid>
             </Grid>
         </header>
     );
 }
 
-export default Header;
+export default LandingHeader;
