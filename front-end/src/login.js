@@ -66,30 +66,39 @@ function Login() {
                                 id="outlined-adornment-password"
                                 type={showPassword ? 'text' : 'password'}
                                 endAdornment={
-                                <InputAdornment position="end">
-                                    <IconButton
-                                    aria-label="toggle password visibility"
-                                    onClick={handleClickShowPassword}
-                                    onMouseDown={handleMouseDownPassword}
-                                    edge="end"
-                                    >
-                                    {showPassword ? <VisibilityOff /> : <Visibility />}
-                                    </IconButton>
-                                </InputAdornment>
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                        aria-label="toggle password visibility"
+                                        onClick={handleClickShowPassword}
+                                        onMouseDown={handleMouseDownPassword}
+                                        edge="end"
+                                        >
+                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                        </IconButton>
+                                    </InputAdornment>
                                 }
                                 label="Password"
                             />
                         </FormControl>
                         
-                        <Button variant='contained' color='primary' sx={{ m: 1, width: '350px' }}>
-                            <Typography variant='button'>Sign In</Typography>
+                        <Button 
+                            variant='contained' 
+                            color='primary' 
+                            sx={{ m: 1, width: '350px' }}
+                        >
+                            Log In
                         </Button>
                         
                         <div></div>
                         <Divider variant='middle' sx={{width: '100%', maxWidth: '350px' }}/>
                         
-                        <Link href="/" underline='none' color='#4F86D0'>
-                            <Typography variant='caption'>Sign up</Typography>
+                        <Link 
+                            id='register-button' 
+                            href="/" 
+                            underline='none' 
+                            color='#4F86D0'
+                        >
+                            <Typography variant='caption'>Register</Typography>
                         </Link>
                     </Stack>
                 </Grid>  

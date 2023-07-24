@@ -1,39 +1,45 @@
 import React from 'react';
 import './data.css';
+import Header from './header';
 import { Box, Grid, Typography, Divider } from '@mui/material';
 
 function Item({ name, category, date, amount }) {
     return (
-        <Grid item>
-            <Divider />
-            <Grid
-                className='item'
-                container
-                direction='row'
-                alignItems='baseline'
-            >
-                <Grid item xs textAlign='left'>
-                    <Box sx={{ fontWeight: 'medium' }}>
-                        { name }
-                    </Box>
+        <>
+            <Header />
+            <main>
+                <Grid item>
+                    <Divider />
+                    <Grid
+                        className='item'
+                        container
+                        direction='row'
+                        alignItems='baseline'
+                    >
+                        <Grid item xs textAlign='left'>
+                            <Box sx={{ fontWeight: 'medium' }}>
+                                { name }
+                            </Box>
+                        </Grid>
+                        <Grid item xs>
+                            <Box sx={{ fontWeight: 'medium' }}>
+                                { category }
+                            </Box>
+                        </Grid>
+                        <Grid item xs>
+                            <Box sx={{ fontWeight: 'medium' }}>
+                                { date }
+                            </Box>
+                        </Grid>
+                        <Grid item xs textAlign='end'>
+                            <Box sx={{ fontWeight: 'medium' }}>
+                                { amount }
+                            </Box>
+                        </Grid>
+                    </Grid>
                 </Grid>
-                <Grid item xs>
-                    <Box sx={{ fontWeight: 'medium' }}>
-                        { category }
-                    </Box>
-                </Grid>
-                <Grid item xs>
-                    <Box sx={{ fontWeight: 'medium' }}>
-                        { date }
-                    </Box>
-                </Grid>
-                <Grid item xs textAlign='end'>
-                    <Box sx={{ fontWeight: 'medium' }}>
-                        { amount }
-                    </Box>
-                </Grid>
-            </Grid>
-        </Grid>
+            </main>
+        </>
     );
 }
 

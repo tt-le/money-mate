@@ -13,43 +13,45 @@ const buttonTheme = createTheme({
 
 function Header() {
     return (
-        <Grid
-            className='header'
-            container
-            direction='row'
-            justifyContent='space-between'
-            alignItems='center'
-        >
+        <header>
             <Grid
-                container 
+                className='header'
+                container
                 direction='row'
                 justifyContent='space-between'
-                alignItems='center' 
-                sx={{ width: '160px'}}
+                alignItems='center'
             >
-                <Grid item>
-                    <img className='header-logo' src={ logo } alt='logo' />
+                <Grid
+                    container 
+                    direction='row'
+                    justifyContent='space-between'
+                    alignItems='center' 
+                    sx={{ width: '160px'}}
+                >
+                    <Grid item>
+                        <img className='header-logo' src={ logo } alt='logo' />
+                    </Grid>
+                    <Grid item>
+                        <Typography variant='button' sx={{ fontSize: '18px' }}>
+                            Money Mate
+                        </Typography>
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <Typography variant='button' sx={{ fontSize: '18px' }}>
-                        Money Mate
-                    </Typography>
+                <Grid
+                    container 
+                    direction='row'
+                    sm='auto'
+                >
+                    <Grid item>
+                        <ThemeProvider theme={ buttonTheme }>
+                            <Button variant='outlined' color='primary'>
+                                Log Out
+                            </Button>
+                        </ThemeProvider>
+                    </Grid>
                 </Grid>
             </Grid>
-            <Grid
-                container 
-                direction='row'
-                sm='auto'
-            >
-                <Grid item>
-                    <ThemeProvider theme={ buttonTheme }>
-                        <Button variant='outlined' color='primary'>
-                            Sign Out
-                        </Button>
-                    </ThemeProvider>
-                </Grid>
-            </Grid>
-        </Grid>
+        </header>
     );
 }
 

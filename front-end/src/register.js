@@ -97,19 +97,26 @@ function Register() {
                         <Password label='Password' />
                         <Password label='Confirm Password' />
                         
-                        <Button variant='contained' color='primary' sx={{ m: 1, width: '350px' }}>
-                            <Typography variant='button'>Sign Up</Typography>
+                        <Button 
+                            variant='contained' 
+                            color='primary' 
+                            sx={{ m: 1, width: '350px' }}
+                        >
+                            <Typography variant='button'>Register</Typography>
                         </Button>
                         
                         <div></div>
                         <Divider variant='middle' sx={{width: '100%', maxWidth: '350px' }}/>
                         
-                        <Link href="" underline='none' color='#4F86D0'>
-                            <Typography variant='caption'>Sign in</Typography>
+                        <Link 
+                            href="" 
+                            underline='none' 
+                            color='#4F86D0'
+                        >
+                            <Typography variant='caption'>Log In</Typography>
                         </Link>
                     </Stack>
                 </Grid>
-                
             </ThemeProvider>
         </div>
     );
