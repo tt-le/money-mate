@@ -1,10 +1,11 @@
 import React from 'react';
-import './login-register.css';
-import logo from './money-management.png';
 import { Stack, Typography, createTheme, TextField, ThemeProvider, 
     FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton, 
-    Button, Divider, Box, Link, Grid } from '@mui/material';
+    Button, Divider, Box, Grid } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+
+import './login-register.css';
+import logo from './money-management.png';
 
 const loginTheme = createTheme({
     components: {
@@ -104,17 +105,6 @@ function Register() {
                         >
                             <Typography variant='button'>Register</Typography>
                         </Button>
-                        
-                        <div></div>
-                        <Divider variant='middle' sx={{width: '100%', maxWidth: '350px' }}/>
-                        
-                        <Link 
-                            href="" 
-                            underline='none' 
-                            color='#4F86D0'
-                        >
-                            <Typography variant='caption'>Log In</Typography>
-                        </Link>
                     </Stack>
                 </Grid>
             </ThemeProvider>
