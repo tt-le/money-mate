@@ -10,7 +10,7 @@ import { StatusCodes } from "http-status-codes";
 
 const config = dotenv.config().parsed;
 const app = express();
-const port = 3000;
+const port = 8000;
 const saltRounds = 10;
 
 app.use(bodyParser.json())
